@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Python Sandbox Route List</title>
+</head>
+
+<body>
+	<header> {% include "header.html" %} </header>
+	<h1>Registered Routes</h1>
+	<table border="1">
+		<tr>
+			<th>Endpoint</th>
+			<th>Methods</th>
+			<th>URL</th>
+		</tr> {% for route in routes %} <tr>
+			<td>{{ route.endpoint }}</td>
+			<td>{{ route.methods }}</td>
+			<td>{{ route.url }}</td>
+		</tr> {% endfor %}
+	</table>
+	<footer> {% include "footer.html" %} </footer>
+</body>
+
+</html>
